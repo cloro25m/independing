@@ -2,14 +2,13 @@ import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        calculateTriangleSquare(3, 4, 5);
-    }
+        Order order1 = new Order();
+        order1.addProducts(201, 40000);
+        order1.addProducts(317, 12000);
 
-    public static void calculateTriangleSquare(double a, double b, double c) {
-        double p = (a + b + c) / 2;
-        double square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-        System.out.println(square);
+        System.out.println("Количество: " + order1.getProductCount());
+        System.out.println("Стоимость: " + order1.getTotalCost());
+
     }
 }
